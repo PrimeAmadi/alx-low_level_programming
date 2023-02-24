@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * _isupper - takes an integer and evaluatas
  * if it is the ASCII value of an upper case
