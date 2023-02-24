@@ -13,7 +13,7 @@ void print_numbers(void)
 	{
 		if (i == 50 || i == 52)
 			continue;
-		else 
+		else
 			_putchar(i);
 	}
 	_putchar('\n');
