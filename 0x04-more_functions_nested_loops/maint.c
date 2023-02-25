@@ -6,9 +6,12 @@
 
 int main(void)
 {
-	if (_isdigit('4'))
-		printf("is digit\n");
-	else
-		printf("not digit\n");
+//	if (_isdigit('4'))
+//		printf("is digit\n");
+//	else
+//		printf("not digit\n");
+	print_numbers();
+	printf("\n");
+
 	return (0);
 }
