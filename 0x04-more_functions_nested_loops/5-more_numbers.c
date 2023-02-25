@@ -10,7 +10,7 @@ void more_numbers(void)
 	int i;
 	int d;
 
-	for (i = 0; i <= 10; i++)
+	for (i = 0; i < 10; i++)
 	{
 		for (d = 0; d <= 14; d++)
 		{
@@ -22,7 +22,8 @@ void more_numbers(void)
 				putchar('0' + d - 10);
 			}
 		}
-		putchar('\n');
+		if (i != 9)
+			putchar('\n');
 	}
 
 	/*putchar('\n');*/

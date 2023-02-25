@@ -10,7 +10,8 @@ int main(void)
 //		printf("is digit\n");
 //	else
 //		printf("not digit\n");
-	print_most_numbers();
+//	print_most_numbers();
+	more_numbers();
 	printf("\n");
 
 	return (0);
