@@ -1,18 +1,29 @@
 #include <stdio.h>
 
 /**
- * main - prints all possible combo
- * if single digit
- * Return: 0 always
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char *s = "0, 1, 2, 3, 4, 5, 6, 7, 8, 9";
-	int i = 0;
+	int num1, num2;
 
-	while (s[i])
+	for (num1 = 0; num1 < 9; num1++)
 	{
-		putchar(s[i++]);
+		for (num2 = num1 + 1; num2 <= 9; num2++)
+		{
+			putchar(num1 + '0');
+			putchar(' ');
+			putchar(num2 + '0');
+			if (num1 != 8 || num2 != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
+	putchar('\n');
+	return (0);
 }
