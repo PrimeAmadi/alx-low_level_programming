@@ -22,8 +22,7 @@ void more_numbers(void)
 				putchar('0' + d - 10);
 			}
 		}
-		if (i != 9)
-			putchar('\n');
+		putchar('\n');
 	}
 
 	/*putchar('\n');*/

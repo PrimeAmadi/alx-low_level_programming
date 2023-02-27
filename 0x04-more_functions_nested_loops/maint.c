@@ -12,7 +12,7 @@ int main(void)
 //		printf("not digit\n");
 //	print_most_numbers();
 	more_numbers();
-	printf("\n");
+//	printf("\n");
 
 	return (0);
 }
