@@ -8,9 +8,12 @@
 
 int main(void)
 {
-	int a = 500;
-	reset_to_98(&a);
-	printf("a = %d\n", a);
+	/*int a = 500;*/
+	/* reset_to_98(&a);*/
+	
+	char* str = "12345";
+
+	printf("length = %d\n", _strlen(str));
 	return (0);
 }
 
