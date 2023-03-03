@@ -13,9 +13,6 @@
 
 char *_strcat(char *dest, char *src)
 {
-
-
-	printf("Entered function \n");
 	unsigned long d = 0;
 	unsigned long s = 0;
 
@@ -23,21 +20,20 @@ char *_strcat(char *dest, char *src)
 		return (NULL);
 	if (src == NULL)
 		return (dest);
-	printf("reached p-a\n");
+
 	while (dest[d])
 		d++;
-/* while loop for number of element in
+/*
+ * while loop for number of element in
  * the strng including '\0' terminator.
  * counting from zero
  */
 
-	printf("reached p-b\n");
 	while (src[s])
 	{
 		dest[d + s] = src[s];
 		s++;
 	}
-	printf("reached p-c\n");
 	dest[d + s] = '\0';
 
 	return (dest);
