@@ -32,7 +32,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 
 		if (!found_match)
-			return (i + 1);/*len adjusted b.c i start from 0*/
+			return (i);
 
 		found_match = 0;
 
