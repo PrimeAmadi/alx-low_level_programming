@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 for code in ./*.c
 do
