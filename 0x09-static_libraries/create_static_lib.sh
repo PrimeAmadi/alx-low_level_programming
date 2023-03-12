@@ -2,7 +2,7 @@
 
 for code in ./*.c
 do
-	gcc -c ${code}
+	gcc -c -Wall -Werror -Wextra -pedantic -std=gnu89 ${code}
 done
 
 ar rcs liball.a *.o
