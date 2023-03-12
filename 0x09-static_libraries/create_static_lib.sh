@@ -1,8 +1,4 @@
 #!/bin/bash
-
-for code in ./*.c
-do
-	gcc -c -Wall -Werror -Wextra -pedantic -std=gnu89 ${code}
-done
-
-ar rcs liball.a *.o
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -c *.c
+ar rc liball.a *.o
+ranlib liball.a
