@@ -67,8 +67,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s1 = (!s1) ? "" : s1;
 	s2 = (!s2) ? "" : s2;
 
-	s1len = strlen(s1);
-	s2len = strlen(s2);
+	s1len = _strlen(s1);
+	s2len = _strlen(s2);
 
 	n = (s2len < n) ? s2len : n;
 	bytes = s1len + n + 1;
