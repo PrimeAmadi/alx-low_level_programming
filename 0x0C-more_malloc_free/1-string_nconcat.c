@@ -78,7 +78,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	_memncpy(result, s1, s1len);
-	_memncpy(result + s1len, s2, s2len);
+	_memncpy(result + s1len, s2, n);
 
 	return (result);
 }
