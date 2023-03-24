@@ -38,7 +38,7 @@ void print_all(const char * const format, ...)
 		case 's':
 			str = va_arg(args, char *);
 			str = (str == NULL) ? "(nil)" : str;
-			printf("%s\n", str);
+			printf("%s", str);
 			break;
 		default:
 			flag_valid_format = 0;
