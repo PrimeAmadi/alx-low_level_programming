@@ -47,7 +47,8 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				str = va_arg(args, char *);
-				str = (str == NULL) ? "(nil)" : str;
+				if (str == NULL)
+					str = "(nil)";
 				printf("%s", str);
 				break;
 			default:
@@ -59,6 +60,7 @@ void print_all(const char * const format, ...)
 			printf(", ");
 		}
 	}
+	putchar('\n');
 	va_end(args);
 
 }
