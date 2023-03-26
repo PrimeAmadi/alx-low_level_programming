@@ -30,6 +30,9 @@ void print_all(const char * const format, ...)
 	char *str = NULL;
 	const char *Format = (void *)format;
 
+	if (!format)
+		return;
+
 	va_start(args, format);
 
 	while (*Format)
