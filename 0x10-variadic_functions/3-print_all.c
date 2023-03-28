@@ -1,71 +1,50 @@
 #include "variadic_functions.h"
-#include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
 
 /**
- * is_one_of_us - test if
- * it is 'i' or 'f' or 's' or 'c'
- * @it: the char to test
- * Return: 1 if true 0 otherwise.
-*/
-int is_one_of_us(char it)
-{
-	return (it == 'i' || it == 'f' || it == 's' || it == 'c');
-}
-
-/**
- * print_all - prints anything in
- * in @...
- * NULL pointer to string is printed as "nil"
- * @format: "cifs" denotes char, int, float,
- * string respectively.
- * length of format is the number of argumnents to print
- * @...: @n number of arguments
+ * print_all - prints anything
+ * @format: format specifiers
  */
-
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	char *str = NULL;
-	const char *Format = (void *)format;
+	int i = 0;
+	char *str, *sep = "";
 
-	if (!format)
-		return;
+	va_list list;
 
-	va_start(args, format);
+	va_start(list, format);
 
-	while (*Format)
+	if (format)
 	{
-		switch (*Format)
+		while (format[i])
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				break;
-			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s", str);
-				break;
-			default:
-				break;
-		}
-		Format++;
-		if (is_one_of_us(*Format))
-		{
-			printf(", ");
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
 	}
-	putchar('\n');
-	va_end(args);
 
+	printf("\n");
+	va_end(list);
 }
-
-
