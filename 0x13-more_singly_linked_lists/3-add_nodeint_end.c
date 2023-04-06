@@ -11,13 +11,14 @@
 listint_t **last_next_adrs(listint_t **node)
 {
 	listint_t **cursor = node;
-	/* using node directly will still
+	/**
+	 * using node directly will still
 	 * work since node here is a local
 	 * variable, the address of the passed
 	 * argument is what is copied to node. but cursor
 	 * helps me think clearly about the (de)referencing
 	 * dynamics.
-	 */ 
+	 */
 
 	while (*cursor)
 	{
@@ -46,7 +47,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	new_node->n = n;
 	new_node->next =  NULL;
 
-	
 	*lastnextadrs = new_node;
 
 	return (new_node);
