@@ -12,5 +12,6 @@ void free_listint(listint_t *head)
 		return;
 
 	free_listint(head->next);
+/*	printf("freeing node n = %d\n", head->n);*/
 	free(head);
 }
