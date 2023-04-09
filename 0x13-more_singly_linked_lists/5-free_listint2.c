@@ -16,7 +16,7 @@ void free_listint2(listint_t **head)
 	listint_t *cursor = NULL;
 	listint_t *cursor_temp = NULL;
 
-	if (!head && !(*head))
+	if (!head)
 		return;
 
 	cursor = *head;
