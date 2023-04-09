@@ -30,7 +30,5 @@ void free_listint2(listint_t **head)
 	}
 
 	*head = NULL;
-	head = NULL;
-	/*printf("head : %p\n", (void *)*head);*/
 
 }
